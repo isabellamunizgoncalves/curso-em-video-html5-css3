@@ -1,0 +1,54 @@
+#AULA_03
+
+Propriedades Aprendidas:
+Flex-wrap;
+
+#DEFINIÇÃO Flex-wrap?
+Significa empacotamento de fluxos.
+Ou seja sempre que você acionar esta propridade, os "Pacotes" de um 
+determinado container, vão seguir o fluxo no sentido do no sentido do 
+eixo transversal, o cross axis.
+
+#EXPLICAÇÃO Concreta:
+digamos que tenhamos o seguinte código:
+
+<style>
+        div.container{
+            background-color: tomato;
+            border: sodivd;
+            display: flex;
+        }
+
+        div.item{
+            padding: 10px;
+            flex-direction: row;
+            flex-wrap: wrap
+            border: solid;
+            background-color: aqua;
+        }
+</style>
+
+por padrão a propriedade flex-wrap, vem com o valor nowrap.
+Quando mudamos o valor para wrap, o sentido do pacotes seguirá
+o fluxo determinado pela direção do flex-direction, que neste caso
+do código, como o flex-direction está no valor row, o sentido do eixo 
+é de cima para baixo, assim que o conteúdo não couber mais na página, 
+ele quebrará para baixo do pacote, se fosse flex-wrap: row-reverse, 
+iria no sentido contrario do eixo transversal, ou seja ficaria em cima.
+
+#PRPRIEDADE:
+Flex-flow: 
+É a combinação dos valores de flex-direction e flex-flow.
+
+Ex:
+se eu quiser usar: 
+flex-direction: row;
+flex-wrap: nowrap, 
+
+posso combinar os dois em um da seguinte maneira, respectivamente:
+
+Flex-flow: row nowrap 
+
+Esta é a maneira mais recomendada pela w3school, ou seja trata-se
+de uma boa prática para usarmos. 
+
